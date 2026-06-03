@@ -1,50 +1,42 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULADORA </title>
-    CALCULADORA ,CARACTERISTICAS IP RANGO BROADDCAST MASK MINIMO 3 FUNCIONAL
-<link rel="stylesheet" href="DISEÑO.css">
+    <title>Calculadora IP</title>
+    <link rel="stylesheet" href="DISEÑO.css">
 </head>
 <body>
     <h1>CALCULADORA IP</h1>
-        <label for="ip">Ingresa ip</label>
-        <input type="text" id="ip" name="ip" placeholder="Ejemplo:196.89.56.3/24">
-        <input type="submit" value="Enviar">
-   <p>Subredes necesarias</p>
-<p>Nombre de subred</p>   
-   <input type="textr" id="nombre" name="subred" placeholder="Nombre de subred">
-        <input type="submit" value="Enviar">
-   <p>Subredes necesarias</p>
-<input type="number" id="hosts" name="host" placeholder="Host">
-
-<p>Nombre de subred</p>   
-   <input type="textr" id="nombre" name="subred" placeholder="Nombre de subred">
-        <input type="submit" value="Enviar">
-   <p>Subredes necesarias</p>
-<input type="number" id="hosts" name="host" placeholder="Host">
-<p>Nombre de subred</p>   
-   <input type="textr" id="nombre" name="subred" placeholder="Nombre de subred">
-        <input type="submit" value="Enviar">
-   <p>Subredes necesarias</p>
-<input type="number" id="hosts" name="host" placeholder="Host">
-    <table>
-  <tr>
-    <th>NOMBRE DE SUBRED</th>
-    <th>RED</th>
-    <th>MASCARA DE SUBRED</th>
-    <th>RANGO UTIL</th>
-    <th>HOST</th>
-    <th>BROADCAST</th>
-  </tr>
-  <tr>
-    <th></th>
-    <th></th>
-  </tr>
-</table>
-
+    <div class="formulario">
+        <label for="ip">Ingresa IP:</label>
+        <input type="text" id="ip" name="direccion-ip" placeholder="Ejemplo: 192.168.1.1">
+        <label for="mascara">Ingresa Máscara:</label>
+        <input type="text" id="mascara" name="mascara-ip" placeholder="Ejemplo:/25">
+        <button type="button" onclick="calcular()">Calcular Subredes</button>
+    </div>
+    <hr>
+    <h2>Subredes Necesarias</h2>
+    <div class="subred">
+   <label>Nombre de subred 1:</label>
+     <input type="text" id="nombre-subred-1" placeholder="Nombre">
+    <label>Hosts:</label>
+      <input type="number" id="hosts-subred-1" placeholder="Ejemplo 50">
+    </div>
+    <div class="subred-grupo">
+    <label>Nombre de subred 2:</label>
+    <input type="text" id="nombre-subred-2" placeholder="Nombre">
+    <label>Hosts:</label>
+    <input type="number" id="hosts-subred-2" placeholder="Ejemplo 50">
+    </div>
+    <div class="subred-grupo">
+    <label>Nombre de subred 3:</label>
+    <input type="text" id="nombre-subred-3" placeholder="Nombre">
+   <label>Hosts:</label>
+   <input type="number" id="hosts-subred-3" placeholder="Ejemplo 50">
+    </div>
+    <div id="resultado"></div>
+    <script src="SCRIPT.js"></script>
 </body>
 </html>
